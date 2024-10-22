@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="38dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/log_in"
+            android:textColor="#18206F"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="7dp"
+            android:paddingStart="15dp"
+            android:textColorHint="#757575" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:paddingVertical="7dp"
+            android:paddingStart="15dp"
+            android:textColorHint="#757575" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/tvRedirectSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/dont_have_account"
+            android:textColor="#18206F"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPhoneLogin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/phone_logo" />
+
+            <ImageView
+                android:id="@+id/imgGoogleLogin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/google_logo" />
+
+            <ImageView
+                android:id="@+id/imgFbLogin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/facebook_logo" />
+
+            <ImageView
+                android:id="@+id/imgGuestLogin"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:src="@drawable/guest_logo" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

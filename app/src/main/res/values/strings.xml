@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FireBaseKotlin</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Don\'t have account? Sign up</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account_log_in">already have account? Log In</string>
+    <string name="e2logy_sofware_solutions">E2Logy \nSofware Solutions</string>
+    <string name="dashboard_activity">DashBoard Activity</string>
+    <string name="phone_number_auth">Phone Number Auth</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="google_sign_in">Google Sign In</string>
+    <string name="default_web_client_id">115651598717-iprvbqink4dapcn1jfu00m67pkdsankc.apps.googleusercontent.com</string>
+    <string name="logout">Logout</string>
+
+    <!-- Facebook Authentication -->
+    <string name="facebook_app_id">1295960058051172</string>
+    <string name="facebook_login_protocol_scheme">5ebf9e0ef9994e84681cb443c498b06a</string>
+    <string name="facebook_client_token">b6c39cbae3b3d82b7174fb78e72fe872</string>
+    <string name="facebook_key_hash">GODcyzmdDY9YY/rOMOJQJRIk3to=</string>
+
+</resources>
