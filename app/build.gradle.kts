@@ -43,36 +43,25 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
-    // Add Firebase BOM first to manage versions
-    implementation(platform(libs.firebase.bom))
-
-    // Firebase Authentication
     implementation(libs.firebase.auth)
-    //noinspection UseTomlInstead
-    implementation ("'com.facebook.android:facebook-login:17.2.0")// Use the latest stable version
-
-
-    // Firebase Realtime Database
-    implementation(libs.firebase.database.ktx)
-
-    // Firebase Storage (if needed)
-    implementation(libs.firebase.storage.ktx)
-
-    // Google Play Services Auth (if needed)
     implementation(libs.play.services.auth)
-
-    // Glide (for image loading)
-    implementation(libs.glide)
-    kapt(libs.compiler)
-
-    // Testing Libraries
+    implementation(libs.facebook.android.sdk)
+    implementation(libs.facebook.login)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Firebase Realtime Database
+    implementation(libs.google.firebase.database.ktx)
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
+    implementation("com.google.firebase:firebase-storage-ktx")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt ("com.github.bumptech.glide:compiler:4.15.1")
+
 }
