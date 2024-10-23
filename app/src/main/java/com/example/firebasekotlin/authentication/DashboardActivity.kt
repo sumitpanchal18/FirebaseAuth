@@ -1,4 +1,4 @@
-package com.example.firebasekotlin
+package com.example.firebasekotlin.authentication
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.util.Base64
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.firebasekotlin.R
 import com.example.firebasekotlin.databinding.ActivityDashboardBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient

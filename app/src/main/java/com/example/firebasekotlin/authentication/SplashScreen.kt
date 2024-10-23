@@ -1,4 +1,4 @@
-package com.example.firebasekotlin
+package com.example.firebasekotlin.authentication
 
 import android.annotation.SuppressLint
 import android.content.Intent

@@ -1,4 +1,4 @@
-package com.example.firebasekotlin
+package com.example.firebasekotlin.authentication
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.firebasekotlin.R
 import com.facebook.*
 import com.facebook.appevents.AppEventsLogger
 import com.facebook.login.LoginResult
@@ -60,7 +61,7 @@ class FacebookAuth : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user: FirebaseUser? = auth.currentUser
                     Log.d(TAG, "handleFacebookAccessToken: $user")
-                    startActivity(Intent(this,DashboardActivity::class.java))
+                    startActivity(Intent(this, DashboardActivity::class.java))
                     finish()
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                 } else {

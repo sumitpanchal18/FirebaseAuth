@@ -1,17 +1,16 @@
-package com.example.firebasekotlin
+package com.example.firebasekotlin.authentication
 
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.firebasekotlin.databinding.ActivityLoginBinding
+import com.example.firebasekotlin.realtimeStorage.RealtimeDatabaseActivity
+import com.example.firebasekotlin.storage.StorageActivity
+import com.google.android.gms.auth.api.signin.internal.Storage
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
 
@@ -75,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                         val uid = user.uid
                         Log.d(TAG, "User Id : $uid")
                     }
-                    val intent = Intent(this, DashboardActivity::class.java)
+                    val intent = Intent(this, RealtimeDatabaseActivity::class.java)
                     startActivity(intent)
                     finish()
                     Toast.makeText(this, "Signed in anonymously", Toast.LENGTH_SHORT).show()

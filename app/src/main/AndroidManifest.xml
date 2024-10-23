@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -14,35 +21,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FireBaseKotlin"
         tools:targetApi="31">
+        <activity
+            android:name=".realtimeStorage.RealtimeDatabaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".storage.StorageActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-
         <meta-data
             android:name="com.facebook.sdk.ClientToken"
             android:value="@string/facebook_client_token" />
 
         <activity
-            android:name=".FacebookAuth"
+            android:name=".authentication.FacebookAuth"
             android:exported="false" />
         <activity
-            android:name=".GoogleAuthActivity"
+            android:name=".authentication.GoogleAuthActivity"
             android:exported="false" />
         <activity
-            android:name=".PhoneAuthActivity"
+            android:name=".authentication.PhoneAuthActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".authentication.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".authentication.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".authentication.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".authentication.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

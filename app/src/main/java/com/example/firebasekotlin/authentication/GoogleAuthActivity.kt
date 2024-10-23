@@ -1,9 +1,10 @@
-package com.example.firebasekotlin
+package com.example.firebasekotlin.authentication
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.firebasekotlin.R
 import com.example.firebasekotlin.databinding.ActivityGoogleAuthBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount

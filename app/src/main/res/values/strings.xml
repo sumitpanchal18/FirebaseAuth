@@ -24,5 +24,8 @@
     <string name="facebook_login_protocol_scheme">5ebf9e0ef9994e84681cb443c498b06a</string>
     <string name="facebook_client_token">b6c39cbae3b3d82b7174fb78e72fe872</string>
     <string name="facebook_key_hash">GODcyzmdDY9YY/rOMOJQJRIk3to=</string>
+    <string name="upload">Upload</string>
+    <string name="upload_file">Upload File</string>
+    <string name="fetch_image">Fetch Image</string>
 
 </resources>

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("kotlin-kapt")
 }
 
 android {
@@ -42,16 +43,35 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // Add Firebase BOM first to manage versions
+    implementation(platform(libs.firebase.bom))
+
+    // Firebase Authentication
     implementation(libs.firebase.auth)
-    implementation (libs.play.services.auth)
-    implementation (libs.facebook.android.sdk)
-    implementation (libs.facebook.login)
+    //noinspection UseTomlInstead
+    implementation ("'com.facebook.android:facebook-login:17.2.0")// Use the latest stable version
+
+
+    // Firebase Realtime Database
+    implementation(libs.firebase.database.ktx)
+
+    // Firebase Storage (if needed)
+    implementation(libs.firebase.storage.ktx)
+
+    // Google Play Services Auth (if needed)
+    implementation(libs.play.services.auth)
+
+    // Glide (for image loading)
+    implementation(libs.glide)
+    kapt(libs.compiler)
+
+    // Testing Libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
