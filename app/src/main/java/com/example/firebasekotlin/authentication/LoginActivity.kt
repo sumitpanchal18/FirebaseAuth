@@ -74,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
                         val uid = user.uid
                         Log.d(TAG, "User Id : $uid")
                     }
-                    val intent = Intent(this, RealtimeDatabaseActivity::class.java)
+                    val intent = Intent(this, StorageActivity::class.java)
                     startActivity(intent)
                     finish()
                     Toast.makeText(this, "Signed in anonymously", Toast.LENGTH_SHORT).show()

@@ -39,9 +39,15 @@ class RealtimeDatabaseActivity : AppCompatActivity() {
         updateButton = findViewById(R.id.updateButton)
         deleteButton = findViewById(R.id.deleteButton)
 
-        addButton.setOnClickListener { addUser() }
-        updateButton.setOnClickListener { updateUser() }
-        deleteButton.setOnClickListener { deleteUser() }
+        addButton.setOnClickListener {
+            addUser()
+        }
+        updateButton.setOnClickListener {
+            updateUser()
+        }
+        deleteButton.setOnClickListener {
+            deleteUser()
+        }
 
         getUsers()
     }
@@ -72,7 +78,7 @@ class RealtimeDatabaseActivity : AppCompatActivity() {
                 for (userSnapshot in snapshot.children) {
                     val user = userSnapshot.getValue(User::class.java)
                     user?.let {
-                        usersList.append("ID: ${it.id}, Name: ${it.name}, Age: ${it.age}\n")
+                        usersList.append("ID: ${it.id}, Name: ${it.name}, Age: ${it.age}\n\n")
                     }
                 }
                 userListTextView.text = usersList.toString()
