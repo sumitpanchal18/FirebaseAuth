@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
                     finish()
                     Toast.makeText(this, "Signed in anonymously", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Authentication failed.Please Try Again", Toast.LENGTH_SHORT).show()
                 }
             }
     }
