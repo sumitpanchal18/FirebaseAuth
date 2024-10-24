@@ -7,9 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firebasekotlin.databinding.ActivityLoginBinding
-import com.example.firebasekotlin.realtimeStorage.RealtimeDatabaseActivity
 import com.example.firebasekotlin.storage.StorageActivity
-import com.google.android.gms.auth.api.signin.internal.Storage
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -84,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+    @Deprecated("This method has been deprecated in favor of using the\n      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.\n      The OnBackPressedDispatcher controls how back button events are dispatched\n      to one or more {@link OnBackPressedCallback} objects.")
     override fun onBackPressed() {
         super.onBackPressed()
         finishAffinity()
