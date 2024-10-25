@@ -1,11 +1,14 @@
 package com.example.firebasekotlin.authentication
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firebasekotlin.R
@@ -22,6 +25,7 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var mGoogleSignInClient: GoogleSignInClient
     lateinit var binding: ActivityDashboardBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -31,6 +35,16 @@ class DashboardActivity : AppCompatActivity() {
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
+
+        val crashButton = findViewById<Button>(R.id.btnCrashlytics)
+        crashButton.text = "Test Crash"
+        crashButton.setOnClickListener {
+            throw RuntimeException("Test Crash")
+        }
+
+     /*   addContentView(crashButton, ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT))*/
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 

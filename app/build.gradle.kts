@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
     id("kotlin-kapt")
+    id("com.google.firebase.crashlytics") version "3.0.2"
 }
 
 android {
@@ -63,5 +64,8 @@ dependencies {
     implementation("com.google.firebase:firebase-storage-ktx")
     implementation("com.github.bumptech.glide:glide:4.15.1")
     kapt ("com.github.bumptech.glide:compiler:4.15.1")
+
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
 
 }

@@ -30,8 +30,10 @@ compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compi
 facebook-android-sdk = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdk" }
 facebook-android-sdk-v100 = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
 facebook-login = { module = "com.facebook.android:facebook-login", version.ref = "facebookLogin" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-bom-v3200 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
 firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
